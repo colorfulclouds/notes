@@ -1,0 +1,8 @@
+使用历程：
+
+root操作
+插入U盘
+mount -t ntfs-3g /dev/sdc4 /mnt/usb
+umount /dev/sdc4
+
+
