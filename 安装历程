@@ -26,5 +26,24 @@ https://blog.csdn.net/weixin_43279032/article/details/83341011
 安装anaconda：
 https://www.imooc.com/article/72371
 安装结束后记得source ~/.bashrc
+配置文件：~/.condarc
+
+安装网易云音乐：
+这里有一个安装包可以使用：https://blog.csdn.net/wuyujin1997/article/details/97322932
+https://blog.csdn.net/cv_jason/article/details/83033678
+https://blog.csdn.net/u014292162/article/details/72614779
+初次运行时，会需要各种依赖，有qt的，yum install xxx安装即可（yum install qt5-qtxxx）
+由于开发者使用的gcc版本过高出现问题解决方案：https://www.cnblogs.com/liangjiongyao/p/9115182.html
+安装qt与解码器：https://blog.csdn.net/hong_sir1988/article/details/72716690
+
+安装teamviewer：
+官方下载站点：https://www.teamviewer.cn/cn/download/linux/
+https://www.cnblogs.com/xiaozhuangAna/p/10336901.html
+
+各种依赖库 可能需要epel源
+
+
+
+
 
 
