@@ -5,5 +5,14 @@ root操作
 mount -t ntfs-3g /dev/sdc4 /mnt/usb
 umount /dev/sdc4
 
+yum的repo知识：
+https://www.cnblogs.com/yangp/p/8506264.html
+
 centos yum换源 国内
 https://blog.csdn.net/betty_xfy/article/details/78018398
+
+更换了新的repo后，需要下面的操作：
+yum clean all
+yum makecache
+
+
