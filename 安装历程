@@ -59,6 +59,8 @@ https://blog.csdn.net/ohcezzz/article/details/79496864
 成功进入程序后，可能会出现网络异常等问题，因为缺失解码器：
 https://blog.csdn.net/hong_sir1988/article/details/72716690
 在安装解码器之前，需要更换yum源
+
+http://tieba.baidu.com/p/5593470159
 <<<<<<
 
 >>>>>>
@@ -69,7 +71,16 @@ https://www.cnblogs.com/xiaozhuangAna/p/10336901.html
 各种依赖库 可能需要epel源
 <<<<<<
 
+>>>>>>
+安装eclipse：
+https://www.cnblogs.com/dj0325/p/8079442.html
+过程中的小问题，如何编译，如何添加额外库
+https://blog.csdn.net/faihung/article/details/60780646
+<<<<<<
 
-
+>>>>>>
+安装kdevelop：
+https://jingyan.baidu.com/article/5552ef47f5c8bd518efbc972.html
+<<<<<<
 
 
