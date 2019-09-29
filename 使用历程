@@ -1,0 +1,34 @@
+使用历程：
+
+root操作
+插入U盘
+mount -t ntfs-3g /dev/sdc4 /mnt/usb
+umount /dev/sdc4
+
+yum的repo知识：
+https://www.cnblogs.com/yangp/p/8506264.html
+
+centos yum换源 国内
+https://blog.csdn.net/betty_xfy/article/details/78018398
+
+更换了新的repo后，需要下面的操作：
+yum clean all
+yum makecache
+
+chown -R 递归修改 没有-r参数
+
+cp -R 对特殊文件（管道文件 块设备文件 字符设备文件）会进行创建操作，而不是拷贝
+cp -r 将所有的source当作普通文件（常规文件）
+所以 cp -r /dev /dev_bak 会将磁盘设备中的数据进行一次拷贝，而不是仅仅建立设备文件
+
+桌面上生成图标：
+https://www.cnblogs.com/dj0325/p/8079442.html
+https://blog.csdn.net/yf_li123/article/details/80092192
+
+epel源简介：
+https://www.cnblogs.com/gaoyuechen/p/7683471.html
+
+清华大学镜像配置：
+https://mirror.tuna.tsinghua.edu.cn/help/centos/
+清华大学epel镜像配置：
+https://mirror.tuna.tsinghua.edu.cn/help/epel/

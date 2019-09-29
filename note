@@ -1,0 +1,135 @@
+reboot 重启
+poweroff 关机
+pidof
+kill
+killall
+
+查看当前系统版本的详细信息：
+cat /etc/redhat-release
+
+查看系统负载信息
+uptime
+
+who 查看当前系统的登入信息
+last 所有登录记录 但是可能被骇客修改
+
+hostory文件在~/.bash_history中保存着
+
+sosreport收集信息
+
+tail 命令可以实时显示 持续刷新 使用-f参数
+tr 用来替换文本文件中的字符 是字符
+cat xxx | tr x x
+cat xxx | tr [a-z] [A-Z] 小写变为大写
+
+cut -d: -f1 /etc/passwd 以 : 分隔的第一列数据
+
+mkdir p参数 递归创建目录
+
+dd if=/dev/zero of=file count=1 bs=450M
+
+dd if=/dev/cdrom of=xxx.iso
+
+file 查看文件类型
+
+进程名称与状态：
+	R S D Z T
+
+转义字符：
+PRICE=5
+	"\$$PRICE" $5
+	"$PRICE" 5
+	'$PRICE' $PRICE
+	`uname -a` [输出系统的版本信息]
+
+env变量是输出当前用户相关的环境变量
+
+不同用户之间的环境变量是不一样的
+
+自己创建一个变量，不具有全局性，作用范围有限，默认情况不能被其他用户使用，\
+	可以使用export命令将其提升为全局变量，其他用户也可以使用
+
+
+vim三种模式：命令模式 输入模式 末行模式
+
+/etc/sysconfig/network-scripts 网卡配置信息
+
+/etc/yum.repos.d/ yum配置目录，存放yum软件仓库的配置文件
+
+通过路径执行脚本文件的时候，需要加上x权限
+
+见 ~/test.sh
+$0 当前shell脚本程序的名称
+$# 总共几个参数（不包括脚本自己）
+$* 所有位置的参数值（不包括脚本自己）
+$? 上一次命令的执行返回值
+$1 $2 ... 对应第n个位置的参数值
+
+[ -d /home/feifei ] && echo yes
+[ ! -d /home/feifei ] && echo yes
+
+[ ! $USER = root ] && echo user || echo root
+
+整数比较使用：
+-eq
+-ne
+-gt
+-lt
+-le
+-ge
+
+字符串比较使用：
+=
+!=
+-z 判断字符串是否为空 [ -z $STRING ]
+
+-d 是否为目录类型
+-e 文件是否存在
+-f 是否为一般文件
+-r 当前用户是否有读权限
+-w 当前用户是否有写权限
+-x 当前用户是否有执行权限
+
+at 命令 设置一次性任务
+
+crond 命令 设置周期性任务
+
+type 命令查看一个命令是shell内嵌还是系统的命令函数
+
+whereis 命令可以查询命令的绝对路径
+
+crond 字段分别为 分 时 日 月 星期 命令
+
+>>>用户身份与文件权限>>>
+创建用户的时候，会自动创建一个同名的基本用户组，而且该基本用户组只有该用户一个人，\
+	如果该用户以后被归纳入其他用户组，则这个其他用户组称为扩展用户组，\
+	一个用户只有一个基本用户组，但是可以有多个扩展用户组，从而满足日常工作需要。
+
+useradd -g 设置基本用户组
+useradd -G 变更扩展用户组
+
+userdel -r 删除用户时同时删除其家目录
+
+linux文件类型：
+	- 普通文件
+	d 目录文件
+	l 链接文件
+	b 块设备文件
+	c 字符设备文件
+	p 管道文件
+	s 套接字文件
+
+
+文件的特殊权限：
+	SUID：让二进制程序的执行者临时拥有属主的权限（仅对拥有执行权限的二进制程序有效） passwd命令
+	
+	
+
+
+<<<用户身份与文件权限<<<
+
+
+
+
+
+
