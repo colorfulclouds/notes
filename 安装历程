@@ -4,6 +4,14 @@ http://www.comingchina.com/linux/install/3034.html
 <<<<<<
 
 >>>>>>
+安装百度网盘：
+官网下载rpm安装包 rpm -ivh xxx.rpm
+需要注意依赖包问题
+还存在一个问题 便是gcc版本过低问题，需要升级gcc，5.4可以解决问题。
+https://www.cnblogs.com/liangjiongyao/p/9115182.html
+<<<<<<
+
+>>>>>>
 安装搜狗输入法：
 https://blog.csdn.net/qq_37194598/article/details/81035912
 https://www.cnblogs.com/blueherb/p/9521827.html
@@ -17,6 +25,13 @@ https://www.cnblogs.com/blueherb/p/9521827.html
 
 可能缺失的库：
 yum install libXScrnSaver*
+
+安装完成之后可能缺少字体，将字体文件解压：
+tar -xvf xxx.tar.gz -C /usr/share/fonts/
+输入命令：
+mkfontscale
+mkfontdir
+fc-cache
 <<<<<<
 
 >>>>>>
@@ -76,11 +91,6 @@ https://www.cnblogs.com/xiaozhuangAna/p/10336901.html
 https://www.cnblogs.com/dj0325/p/8079442.html
 过程中的小问题，如何编译，如何添加额外库
 https://blog.csdn.net/faihung/article/details/60780646
-<<<<<<
-
->>>>>>
-安装kdevelop：
-https://jingyan.baidu.com/article/5552ef47f5c8bd518efbc972.html
 <<<<<<
 
 
