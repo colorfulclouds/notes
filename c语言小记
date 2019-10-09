@@ -5,4 +5,10 @@ c语言中EOF的定义在stdio.h中 值为-1
 
 测试时使用断言 发布的产品中也要保留断言
 
+memset()函数的第三个参数为字节数量：
+memset(buffer , 0 , N*sizeof(int))
+memset(buffer , 0 , sizeof(buffer)) //如果buffer为函数参数 这种方式不正确 因为sizeof为指针的大小
+
+limits.h头文件中有各种类型的最大值和最小值，例如int：INT——MAX INT——MIN
+
 
