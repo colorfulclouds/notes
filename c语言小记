@@ -12,3 +12,5 @@ memset(buffer , 0 , sizeof(buffer)) //如果buffer为函数参数 这种方式�
 limits.h头文件中有各种类型的最大值和最小值，例如int：INT——MAX INT——MIN
 
 
+
+
