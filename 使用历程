@@ -32,3 +32,8 @@ https://www.cnblogs.com/gaoyuechen/p/7683471.html
 https://mirror.tuna.tsinghua.edu.cn/help/centos/
 清华大学epel镜像配置：
 https://mirror.tuna.tsinghua.edu.cn/help/epel/
+
+rpm简化了软件安装的复杂度
+yum解决软件包之间的依赖问题
+
+
