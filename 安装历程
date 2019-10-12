@@ -16,6 +16,12 @@ https://www.cnblogs.com/liangjiongyao/p/9115182.html
 千万不要卸载ibus，千万不要！！！
 下面的教程比较好
 https://www.techgrow.cn/posts/26aba73.html
+
+搜狗输入法候选字出现乱码时，
+将~/.config下的3个文件夹里： SogouPY、SogouPY.users、sogou-qimpanel 删除这3个文件夹后重启。
+$ killall fcitx
+即可
+（https://blog.csdn.net/weixin_42685395/article/details/94588462）
 <<<<<<
 
 >>>>>>
