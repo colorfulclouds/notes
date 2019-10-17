@@ -317,12 +317,60 @@ lvremove删除逻辑卷设备
 vgremove删除卷组
 pvremove删除物理卷设备
 
+firewalld：动态防火墙管理器
+增加　区域　概念，区域就是预先准备了几套防火墙策略集合，可以根据不同的\
+	场景，选择合适的策略集合。
 
 
+TCPWrappers是系统中默认启用的流量监控程序
+linux系统中有两个防火墙，第一个是基于TCP/IP协议的流量过滤工具；\
+	第二个则是TCPWrappers，允许或者禁止linux系统提供服务的防火墙。
+注意是指定服务，服务名称。
 
+允许控制列表文件：/etc/hosts.allow
+拒绝控制列表文件：/etc/hosts.deny
 
+TCPWrappers依次匹配允许策略配置文件，然后拒绝策略配置文件，\
+	如果都没有匹配到，则默认放行流量。
 
+<<<ssh管理远程主机>>>
+nmtui命令进行网络参数配置。
 
+nmcli命令
+
+ssh是应用层协议
+配置文件：/etc/ssh/sshd_config
+ssh有两种验证方法：
+１）账户和密码
+２）密钥
+
+任务　旧命令　新命令
+使某服务自动启动 	chkconfig --level 3 httpd on 	systemctl enable httpd.service
+使某服务不自动启动 	chkconfig --level 3 httpd off 	systemctl disable httpd.service
+检查服务状态 	service httpd status 	systemctl status httpd.service （服务详细信息） systemctl is-active httpd.service （仅显示是否 Active)
+显示所有已启动的服务 	chkconfig --list 	systemctl list-units --type=service
+启动某服务 	service httpd start 	systemctl start httpd.service
+停止某服务 	service httpd stop 	systemctl stop httpd.service
+重启某服务 	service httpd restart 	systemctl restart httpd.service
+
+scp命令基于ssh协议：
+本地文件传送至远程主机：scp [parameters] 本地文件　远程账户@远程IP地址:远程目录
+文件下载：scp [parameters] 远程账户＠远程IP地址:远程文件　本地目录
+
+使用sshd服务时，当与远程主机的会话被关闭时，在远程主机上运行的命令也随之被中断。
+网络的中断、波动都有可能导致任务中断。
+screen程序是为了解决网络异常中断、同时控制多个远程终端窗口而设计的程序。
+screen的会话共享功能实在是酷炫！！！
+
+<<<插：
+	使用光盘中的文件做yum仓库
+mount /dev/cdrom /media/cdrom
+
+vim /etc/yum.repos.d/cdrom.repo
+	xxx
+	baseurl=file:///media/cdrom
+	xxx
+>>>
 
 
 
