@@ -353,6 +353,8 @@ ssh有两种验证方法：
 停止某服务 	service httpd stop 	systemctl stop httpd.service
 重启某服务 	service httpd restart 	systemctl restart httpd.service
 
+ssh协议属于应用层协议。
+ssl位于TCP/IP协议与各种应用层协议之间。
 scp命令基于ssh协议：
 本地文件传送至远程主机：scp [parameters] 本地文件　远程账户@远程IP地址:远程目录
 文件下载：scp [parameters] 远程账户＠远程IP地址:远程文件　本地目录
@@ -371,6 +373,38 @@ vim /etc/yum.repos.d/cdrom.repo
 	baseurl=file:///media/cdrom
 	xxx
 >>>
+
+yum install httpd（安装的就是Apache）
+
+
+selinux让进程只获取自己本应获取的资源。
+selinux域：对服务程序的功能进行限制
+selinux安全上下文：对文件资源进行限制
+
+selinux有三种配置模式：
+enforcing
+permissive
+disabled
+
+/etc/selinux/config
+
+如果httpd默认可以正常工作，换了一个文件目录不能正常工作了，可能原始是selinux的缘故。
+可以使用ls -Zd　xxx　来查看目录信息
+
+semanage命令管理selinux策略
+设置完成之后，使用restorecon使selinux安全上下文立即生效
+
+getsebool查询并过滤所有与http协议相关的安全策略
+getsebool -a | grep http
+找到后
+setsebool -P httpd_enable_homedirs=on 设置为打开
+（-P为永久生效且立即生效）
+
+虚拟主机可以基于下列实现：
+IP地址
+主机域名
+端口号
+3种方式进行虚拟访问
 
 
 
